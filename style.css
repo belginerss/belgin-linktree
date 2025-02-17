@@ -1,13 +1,123 @@
 body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    height: 1020px;
+    width: 480px;
+    border: 1px solid #ccc;
+    background: linear-gradient(180deg, #0D0D4C, #442A7C);
+}
+
+
+/* Styles de base - Mobile First */
+body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(180deg, #0D0D4C, #442A7C);
     color: white;
     text-align: center;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    width: 100%;
 }
+
+/* Avatar circulaire */
+.profile-pic {
+    width: 90px;
+    height: 90px;
+    background-color: #EAAEFF;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+/* Titre et sous-titre */
+h1 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    font-weight: lighter;
+    margin-bottom: 15px;
+}
+
+/* Icônes sociales */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Boutons */
+.button {
+    width: 90%;
+    max-width: 280px;
+    padding: 12px;
+    margin: 8px auto;
+    background-color: #FF4DA6;
+    border-radius: 15px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #FF76C2;
+    transform: scale(1.03);
+}
+
+/* Pied de page */
+.footer {
+    font-size: 0.75rem;
+    margin-top: 20px;
+    opacity: 0.7;
+}
+
+/* ✅ RESPONSIVE : Ajustements pour tablettes et plus grands écrans */
+@media (min-width: 600px) {
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .button {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+}
+
+
+
