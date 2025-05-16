@@ -1,46 +1,48 @@
-/* RESET & BODY */
-body {
+/* RESET */
+* {
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(180deg, #0D0D4C, #442A7C);
     color: white;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;           /* 🔥 correction : min-height devient height */
-    overflow: hidden;        /* 🔥 pour éviter tout scroll */
+    overflow: hidden;
 }
 
-/* CONTAINER FAÇON MOBILE */
+/* CONTAINER */
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     max-width: 375px;
+    height: 100vh;
     background: linear-gradient(180deg, #0D0D4C, #442A7C);
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    padding-bottom: 40px;
     text-align: center;
+    padding: 20px 0;
 }
 
-/* STRUCTURE */
-header, main, footer {
-    padding: 0 20px;
-}
-
-/* IMAGE DE PROFIL */
-.profile img {
-    margin-top: 40px;           /* au lieu de 60px */
-    margin-bottom: 20px;        /* ✅ ajoute cette ligne */
+/* HEADER */
+header img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid white;
     animation: fadeIn 1.5s ease;
+    margin-top: 20px;
 }
 
-/* TITRE & SOUS-TITRE */
 h1 {
     font-size: 1.5rem;
     margin: 15px 0 5px 0;
@@ -53,7 +55,7 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* RÉSEAUX SOCIAUX */
+/* SOCIAL ICONS */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -69,12 +71,11 @@ h1 {
     transition: transform 0.3s;
 }
 
-/* MICRO-ACTION SUR ICONES */
 .social-icons img:hover {
     transform: scale(1.2);
 }
 
-/* LIENS */
+/* LINKS */
 .links {
     display: flex;
     flex-direction: column;
@@ -94,7 +95,6 @@ h1 {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* MICRO-ACTION SUR BOUTONS */
 .button:hover {
     background-color: #FF76C2;
     transform: scale(1.05);
@@ -103,8 +103,8 @@ h1 {
 /* FOOTER */
 .footer {
     font-size: 0.75rem;
-    margin-top: 40px;
     opacity: 0.7;
+    margin-bottom: 20px;
 }
 
 /* ANIMATIONS */
@@ -116,22 +116,4 @@ h1 {
 @keyframes slideIn {
     from { transform: translateY(-30px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
-}
-
-/* RESPONSIVE (grand écran) */
-@media (min-width: 600px) {
-    h1 {
-      font-size: 2rem;
-    }
-    .subtitle {
-      font-size: 1.2rem;
-    }
-    .social-icons img {
-      width: 32px;
-      height: 32px;
-    }
-    .button {
-      font-size: 1.2rem;
-      padding: 15px;
-    }
 }
